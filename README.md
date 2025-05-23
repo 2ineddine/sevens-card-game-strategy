@@ -2,7 +2,7 @@
 
 ## Team Members
 
-* **Student 1**: Zineddine BOUHADJIRA  
+* **Student 1**: 2ineddine
 * **Student 2**: Massyl ADJAL
 
 ---
