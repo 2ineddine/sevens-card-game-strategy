@@ -1,0 +1,43 @@
+1. compile game :
+
+g++ -std=c++17 -Wall -Wextra -O3 -ldl \
+main.cpp MyGameMapper.cpp MyGameParser.cpp MyCardParser.cpp StrategyLoader.cpp \
+-o sevens_game
+
+
+
+2. Compile strategies :
+
+g++ -std=c++17 -Wall -Wextra -fPIC -shared RandomAgressiveStrategy.cpp -o RandomAgressiveStrategy.so
+
+g++ -std=c++17 -Wall -Wextra -fPIC -shared PrudentStrategy.cpp -o PrudentStrategy.so
+
+g++ -std=c++17 -Wall -Wextra -fPIC -shared CalculativeStrategy.cpp -o CalculativeStrategy.so
+
+g++ -std=c++17 -Wall -Wextra -fPIC -shared Sentinel7.cpp -o Sentinel7.so
+
+
+
+
+3. Run Games :
+
+./sevens_game internal 4
+
+./sevens_game demo
+ 
+./sevens_game competition ./RandomAgressiveStrategy.so ./RandomAgressiveStrategy.so ./RandomAgressiveStrategy.so
+
+./sevens_game competition ./RandomAgressiveStrategy.so ./PrudentStrategy.so ./CalculativeStrategy.so 
+
+
+./sevens_game tournament ./RandomAgressiveStrategy.so ./RandomAgressiveStrategy.so ./RandomAgressiveStrategy.so
+
+
+./sevens_game tournament ./Sentinel7.so ./RandomAgressiveStrategy.so ./RandomAgressiveStrategy.so
+
+./sevens_game tournament ./Sentinel7.so ./PrudentStrategy.so ./PrudentStrategy.so
+
+./sevens_game tournament ./Sentinel7.so ./CalculativeStrategy.so ./CalculativeStrategy.so
+
+./sevens_game tournament ./Sentinel7.so ./PrudentStrategy.so ./CalculativeStrategy.so ./yasser_strategy.so
+

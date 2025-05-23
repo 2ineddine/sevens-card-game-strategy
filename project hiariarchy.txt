@@ -1,0 +1,18 @@
+Class Hierarchy
+
+main (Concrete Implementation : run a game mode)
+
+Generic_card_parser (Abstract Base Class)
+├── MyCardParser (Concrete Implementation : to create the deck)
+└── Generic_game_parser (Abstract Base Class, extends Generic_card_parser)
+    ├── MyGameParser (Concrete Implementation : initialize the table)
+    └── Generic_game_mapper (Abstract Base Class, extends Generic_game_parser)
+        └── MyGameMapper (Concrete Implementation : run all the game loop)
+
+Strategy Hierarchy
+PlayerStrategy (Abstract Base Class / Interface)
+├── RandomStrategy (Concrete Implementation)
+├── GreedyStrategy (Concrete Implementation)
+└── StudentStrategy (Template for student implementation)
+
+StrategyLoader (Concrete Implementation : load a strategy)

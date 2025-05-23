@@ -1,0 +1,7 @@
+﻿*.exe
+*.o
+*.layout
+code_skeleton/.vscode
+code_skeleton/test.ipynb
+code_skeleton/yasser_strategy.so
+code_skeleton/yasser_strategy_2.so
